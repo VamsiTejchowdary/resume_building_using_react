@@ -12,6 +12,8 @@ import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/CV.pdf';
 import { useTheme } from '../../common/ThemeContext';
+import faDownloadWhite from '../../assets/downloadlight.svg';
+import faDownloadDark from '../../assets/downloaddark.svg';
 
 // Set the app element for accessibility (required for react-modal)
 Modal.setAppElement('#root');
@@ -19,7 +21,7 @@ Modal.setAppElement('#root');
 function Hero() {
   const { theme, toggleTheme } = useTheme();
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const downloadIcone = theme === 'light'? faDownloadWhite:faDownloadDark;
   const themeIcon = theme === 'light' ? sun : moon;
   const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
@@ -50,8 +52,8 @@ function Hero() {
       </div>
       <div className={styles.info}>
         <h1>
-          Vamsi <br></br>
-          Tej
+          Vamsi Tej<br></br>
+          Chowdary
         </h1>
         <h2>
           FullStack Web Developer
@@ -69,13 +71,14 @@ function Hero() {
         </span>
         <p className={styles.description}>With a passion to work as a fullstack web developer</p>
         <div className={styles.resumeContainer}>
-          <button className={styles.resumeButton} onClick={openModal}>
+          <button className={styles.resumeButton} onClick={openModal} title='View'>
             View Resume
           </button>
+          <a className={styles.downloadResume} href={CV} target="_blank" title='Download' download>
+          <img src={downloadIcone} alt='GitHub Icon' />
+          </a>
         </div>
       </div>
-
-      {/* Modal for PDF Viewer */}
       <Modal 
         isOpen={isModalOpen} 
         onRequestClose={closeModal} 

@@ -1,4 +1,4 @@
-import './SkillSection.css'; // Import the CSS file for styling\
+import './SkillSection.css';
 import cs from '../../assets/CS.svg';
 import java from '../../assets/Java-Dark.svg';
 import python from '../../assets/Python-Dark.svg';
@@ -20,17 +20,28 @@ const skillsData = [
       cs,
       java,
       python
+    ],
+    names: [
+      'C#',
+      'Java',
+      'Python'
     ]
   },
   {
     category: 'Web Development',
     icons: [
-      ,
       html,
       css,
       js,
       jquery,
       react
+    ],
+    names: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'jQuery',
+      'React'
     ]
   },
   {
@@ -41,31 +52,45 @@ const skillsData = [
       sqllite,
       azure,
       mysql
+    ],
+    names: [
+      '.Net',
+      'Git',
+      'SQLite',
+      'Azure',
+      'MySQL'
     ]
   }
 ];
 
 const SkillsSection = () => {
   return (
-    <center><section className='skills-header'>
-    <div className='header-name'><h1>SKILLS</h1></div> 
-    <div className="skills-section">
-      <div className="skills-container">
-        {skillsData.map((skill, index) => (
-          <div key={index} className='skill-category'>
-            <div className='skill-category-name'>
-            <h2>{skill.category}</h2>
-            </div>
-            <div className="icons-container">
-              {skill.icons.map((icon, i) => (
-                <img key={i} src={icon} alt={`${skill.category} icon`} className="skill-icon" />
-              ))}
-            </div>
+    <center>
+      <section className='skills-header'>
+        <div className='header-name'><h1>SKILLS</h1></div> 
+        <div className="skills-section">
+          <div className="skills-container">
+            {skillsData.map((skill, index) => (
+              <div key={index} className='skill-category'>
+                <div className='skill-category-name'>
+                  <h2>{skill.category}</h2>
+                </div>
+                <div className="icons-container">
+                  {skill.icons.map((icon, i) => (
+                    <img 
+                      key={i} 
+                      src={icon} 
+                      title={skill.names[i]} 
+                      className="skill-icon" 
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-    </section></center>
+        </div>
+      </section>
+    </center>
   );
 };
 
