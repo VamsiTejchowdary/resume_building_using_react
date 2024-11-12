@@ -3,6 +3,7 @@ import whiteresume from '../../assets/finalresume.png';
 import blackresume from '../../assets/finalresume.png';
 import freshBurger from '../../assets/fresh-burger.png';
 import hipsster from '../../assets/hipsster.png';
+import hourstracker from '../../assets/hourstracker.png';
 import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
 import { useTheme } from '../../common/ThemeContext';
@@ -15,6 +16,12 @@ function Projects() {
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
+      <ProjectCard
+          src={hourstracker}
+          link="https://hourstracker.onrender.com/login"
+          h3="Hours Tracker"
+          //p="Resume "
+        />
         <ProjectCard
           src={resumeIcon}
           link="https://github.com/VamsiTejchowdary/resume_building_using_react"
