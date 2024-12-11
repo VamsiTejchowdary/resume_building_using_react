@@ -6,16 +6,27 @@ import hipsster from '../../assets/hipsster.png';
 import hourstracker from '../../assets/hourstracker.png';
 import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
+import TfiWhite from '../../assets/TFI-White.png';
+import TfiBlack from '../../assets/TFI_black.png';
+import cinema from '../../assets/cinema2.jpg';
+
 import { useTheme } from '../../common/ThemeContext';
 
 function Projects() {
   const { theme, toggleTheme } = useTheme();
   const resumeIcon = theme === 'light' ? whiteresume : blackresume;
+  const tfiLogo = theme === 'light'? TfiBlack: TfiWhite;
   return (
     
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
+      <ProjectCard
+          src={cinema}
+          link="https://telugufilminsights.com"
+          h3="Telugu Film Insights"
+          //p="TFI App"
+        />
       <ProjectCard
           src={hourstracker}
           link="https://hourstracker.onrender.com/login"
@@ -40,12 +51,6 @@ function Projects() {
           h3="Big Mart Sales Predection"
           //p="Resume "
         />
-        {/* <ProjectCard
-          src={fitLift}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="FitLift"
-          p="Fitness App"
-        /> */}
       </div>
     </section>
   );
