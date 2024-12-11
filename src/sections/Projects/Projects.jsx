@@ -1,13 +1,9 @@
 import styles from './ProjectStyles.module.css';
 import whiteresume from '../../assets/finalresume.png';
 import blackresume from '../../assets/finalresume.png';
-import freshBurger from '../../assets/fresh-burger.png';
 import hipsster from '../../assets/hipsster.png';
 import hourstracker from '../../assets/hourstracker.png';
-import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
-import TfiWhite from '../../assets/TFI-White.png';
-import TfiBlack from '../../assets/TFI_black.png';
 import cinema from '../../assets/cinema2.jpg';
 
 import { useTheme } from '../../common/ThemeContext';
@@ -15,7 +11,6 @@ import { useTheme } from '../../common/ThemeContext';
 function Projects() {
   const { theme, toggleTheme } = useTheme();
   const resumeIcon = theme === 'light' ? whiteresume : blackresume;
-  const tfiLogo = theme === 'light'? TfiBlack: TfiWhite;
   return (
     
     <section id="projects" className={styles.container}>
