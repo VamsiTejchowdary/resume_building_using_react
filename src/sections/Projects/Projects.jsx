@@ -7,9 +7,7 @@ import blackresume from '../../assets/finalresume.png';
 import hipsster from '../../assets/hipsster.png';
 import hourstracker from '../../assets/hourstracker.png';
 import cinema from '../../assets/cinema2.jpg';
-
 import { useTheme } from '../../common/ThemeContext';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Import GitHub and Website icons
 
 function Projects() {
   const { theme } = useTheme();

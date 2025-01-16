@@ -4,7 +4,7 @@ import reactIcon from '../../assets/React-Dark.svg'; // Add correct path
 import mongodbIcon from '../../assets/mongodb.svg'; // Add correct path
 import git from '../../assets/Git.svg'; 
 import { useTheme } from '../../common/ThemeContext'; // Assuming you're using this for theme
-import { FaGithub, FaLink } from 'react-icons/fa';  // Importing icons from react-icons
+import { FaGithub, FaLink } from 'react-icons/fa';  
 
 function Popup({ project, closePopup }) {
   const { theme } = useTheme(); // Get the current theme (light or dark)
