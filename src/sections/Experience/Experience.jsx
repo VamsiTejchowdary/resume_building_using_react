@@ -2,6 +2,13 @@ import styles from './ExperienceStyle.module.css';
 
 const experiences = [
   {
+    company: "TrueChoicePack",
+    title: "Tech Intern",
+    location: "Cincinnati, Ohio-45069. ",
+    duration: "Nov 2024 - Present",
+    description: "Worked extensively on AWS Lightsail and CloudWatch, ensuring seamless hosting and monitoring of websites with health checks for reliability. Configured and managed AWS SNS for efficient notification systems, enhancing communication across platforms. Maintained hosted websites on AWS with a focus on uptime and security compliance. Additionally, designed and developed a new e-commerce website from scratch, gaining hands-on experience with minimal code tools and rapid deployment techniques."
+  },
+  {
     company: "West Pharmaceuticals Services",
     title: " Associate Software Engineer",
     location: "Bangalore, India",

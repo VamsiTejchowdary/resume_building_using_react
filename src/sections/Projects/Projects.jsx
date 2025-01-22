@@ -7,6 +7,12 @@ import blackresume from '../../assets/finalresume.png';
 import hipsster from '../../assets/hipsster.png';
 import hourstracker from '../../assets/hourstracker.png';
 import cinema from '../../assets/cinema2.jpg';
+import foodtruck from '../../assets/foodtruck.png';
+import reactIcon from '../../assets/React-Dark.svg';
+import mongodbIcon from '../../assets/mongodb.svg';
+import gitIcon from '../../assets/Git.svg';
+import firestore from '../../assets/firestore.svg';
+import python from '../../assets/Python-Dark.svg';
 import { useTheme } from '../../common/ThemeContext';
 
 function Projects() {
@@ -28,11 +34,20 @@ function Projects() {
 
   const projects = [
     {
+      src: foodtruck,
+      h3: "Foode Alert",
+      description: "An app to notify customers about food truck locations.",
+      githubLink: "https://github.com/VamsiTejchowdary/foodealert",
+      websiteLink: "https://foodealert.com",
+      techIcons: [reactIcon, mongodbIcon, gitIcon],
+    },
+    {
       src: cinema,
       h3: "Telugu Film Insights",
       description: "A website for Telugu cinema reviews and insights.",
       githubLink: "https://github.com/VamsiTejchowdary/telugumoviesreviews",
       websiteLink: "https://telugufilminsights.com",
+      techIcons: [reactIcon, firestore, gitIcon],
     },
     {
       src: hourstracker,
@@ -40,6 +55,7 @@ function Projects() {
       description: "An app for tracking work hours and shifts.",
       githubLink: "https://github.com/VamsiTejchowdary/hourstracker",
       websiteLink: "https://hourstracker.onrender.com/login",
+      techIcons: [reactIcon, mongodbIcon, gitIcon],
     },
     {
       src: resumeIcon,
@@ -47,6 +63,7 @@ function Projects() {
       description: "A digital resume built using React.",
       githubLink: "https://github.com/VamsiTejchowdary/resume_building_using_react",
       websiteLink: "https://vamsitejchowdary.com",
+      techIcons: [reactIcon,firestore, gitIcon],
     },
     {
       src: hipsster,
@@ -54,6 +71,7 @@ function Projects() {
       description: "Sales prediction model for Big Mart data.",
       githubLink: "https://github.com/VamsiTejchowdary/Big-mart-sales-predection",
       websiteLink: "https://github.com/VamsiTejchowdary/Big-mart-sales-predection",
+      techIcons: [python, gitIcon],
     },
   ];
 
@@ -63,11 +81,7 @@ function Projects() {
       <div className={styles.projectsContainer}>
         {projects.map((project, index) => (
           <div key={index} onClick={(event) => handleCardClick(event, project)}>
-            <ProjectCard
-              src={project.src}
-              h3={project.h3}
-              // Don't pass the description here; it's not needed in the card
-            />
+            <ProjectCard src={project.src} h3={project.h3} />
           </div>
         ))}
       </div>

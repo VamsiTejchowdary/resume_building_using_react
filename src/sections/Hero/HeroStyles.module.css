@@ -1,5 +1,5 @@
 .container {
-    margin-top: 230px;
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +32,12 @@
     a {
       width: fit-content;
       align-self: center;
+    }
+    .description {
+      max-width: 50ch; /* Increase this value to make the description wider */
+      align-self: center;
+      margin: 0 auto; /* Center it horizontally */
+      line-height: 1.6; /* Adjust line-height for better readability */
     }
   
     button {
@@ -133,6 +139,9 @@
       max-width: 100%;
       max-height: 100%;
       padding: 10px; /* Reduce padding for smaller screens */
+    }
+    .description {
+      max-width: 60ch; /* Increase width for larger screens */
     }
   
     .closeButton {
