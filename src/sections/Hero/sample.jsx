@@ -10,7 +10,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import CV from "../../assets/Dabbar_Vamsi_Tej_Chowdary.pdf";
+import CV from "../../assets/Vamsi_Tej_Chowdary_Dabbar.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import faDownloadWhite from "../../assets/downloadlight.svg";
 import faDownloadDark from "../../assets/downloaddark.svg";
@@ -58,14 +58,7 @@ function Hero() {
         <h2>FullStack Web Developer</h2>
         <span className={styles.socialLinks}>
           <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={twitterIcon} alt="Twitter Icon" />
-          </a>
-          <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/vamsitejchowdary/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -80,13 +73,12 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          With over 3 years of experience as a dedicated full-stack web
-          developer, including 2 years of specialized expertise in C# and the
-          .NET framework, I bring a robust understanding of end-to-end
-          application development. My passion lies in crafting scalable,
-          user-friendly web solutions, leveraging modern technologies like
-          React, Next and NodeJs. I thrive on creating efficient,
-          well-designed systems that drive user engagement and business success.
+        Dynamic and results-oriented Software Engineer with 3+ years of hands-on experience, poised to expand to 5+
+years with a Master’s degree. Expertise in developing scalable and high-performance web applications using
+React, Next.js, .NET, and JavaScript. Proficient in cloud services (AWS, including Lightsail, CloudWatch, SNS)
+and DevOps practices, ensuring reliable and efficient website hosting, monitoring, and communication.Strong
+problem-solving abilities with a focus on creating intuitive user experiences and maintaining secure, scalable
+applications.
         </p>
         <div className={styles.resumeContainer}>
           <button
